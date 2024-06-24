@@ -1,0 +1,104 @@
+1. 
+a) print odd number in an array
+
+function arr(array){
+    for(var i = 0 ; i< array.length ; i++){
+        if(array[i]%2!=0){
+            console.log(array[i])
+        }}}
+    var nums = [1,2,3,4,5,6,7,8,9];
+    var call= arr(nums);
+
+IIFE:
+
+(function(array){
+for(var i = 0 ; i< array.length ; i++){
+if(array[i]%2!=0){
+console.log(array[i])
+}}})([1,2,3,4])
+
+
+c) Sum of all array 
+
+function sumarr(arr) 
+{
+  let sum= 0;
+  for (let i =0;i< arr.length;i++) {
+    sum+= arr[i];
+  }
+  return sum;
+}
+
+var numbers= [1,2,3,4,5];
+var result= sumarr(numbers);
+console.log(result);
+
+d) return all prime numbers in array 
+
+function prime(num) {
+    if (num<=1) 
+    return false;
+    for (let i=2;i<= Math.sqrt(num);i++) 
+    {
+        if(num%i===0) 
+        return false;
+    }
+    return true;
+}
+
+function getprimenums(arr) {
+    return arr.filter(prime);
+}
+var arr=[1,2,3,4,5,6,7,8,9,10];
+var primeno=getprimenums(arr);
+console.log(primeno);
+
+e) retun palindrome in an arrays
+
+function ispalindrome(str) 
+{
+const reversedStr=str.split('').reverse().join('');
+    return str===reversedStr;
+}
+function getpalindromes(arr) {
+    return arr.filter(ispalindrome);
+}
+var arr=["madam","hello","malayalam", "world", "level"];
+var palindromes=getpalindromes(arr);
+console.log(palindromes);
+
+g) remove duplicates in an array
+
+function duplicates(arr) {
+    return [new Set(arr)];
+}
+var arr=[1, 2, 2, 3, 4, 4, 5];
+var nums=duplicates(arr);
+console.log(nums);
+
+h) rotate array by k times
+
+function rotatearray(arr,k) 
+{
+    const len=arr.length;
+    k=k%len; 
+return arr.slice(-k).concat(arr.slice(0, len - k));
+}
+const arr=[1,2,3,4,5];
+const k=2;
+const rotate=rotatearray(arr, k);
+console.log(rotate);
+
+
+Arrow functions
+
+a) odd numbers
+
+var odd = (arr) => arr.filter(number => number % 2 !== 0);
+var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+var oddnum = odd(arr);
+console.log(oddnum);
+
+
+
+
